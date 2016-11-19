@@ -18,7 +18,7 @@ class DbHandler(object):
         for tmp_dict in tmp_list:
             # print(tmp_dict)
             if not self.if_in_db(tmp_dict['md5']):
-                print(tmp_dict, '\n')
+                # print(tmp_dict, '\n')
                 self.cursor.execute("insert into job_info values ('%s','%s','%s','%s','%s','%s','%s','%s')" % (
                     tmp_dict['job_link'], tmp_dict['job'], tmp_dict['job_company'], tmp_dict['job_department'], tmp_dict['job_location'], tmp_dict['date'], tmp_dict['md5'], tmp_dict['etl_date']))
         self.conn.commit()
@@ -63,12 +63,12 @@ class DbHandler(object):
             json.dump(self.flag, fwrite)
 
     def db_task(self, data_list):
-        print('    db connect successfully')
+        # print('    db connect successfully')
         self.reset_flag()
         # self.initial_table('job_info')
         # self.initial_table('job_info_today')
-        print('    initial successfully')
+        # print('    initial successfully')
         # self.save_into_today(data_list)
         # print('    update today\'s job info successfully')
         self.save_into_all(data_list)
-        print('    save data into job_info successfully')
+        # print('    save data into job_info successfully')
