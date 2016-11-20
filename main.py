@@ -19,7 +19,7 @@ if __name__ == '__main__':
     for item in info_today:
         # print("%-20s%-100s%100s" % (item[2],item[1], item[0]))
         print('{:<20}{:<40}{:>100}'.format(item[2], item[1], item[0]))
-    print('*' * 16, 'have a nice day ', '*' * 16)
+    # print('*' * 16, 'have a nice day ', '*' * 16)
     # print('=' * 50)
     # print('=' * 50)
     # print('=' * 50)
