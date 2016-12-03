@@ -6,5 +6,5 @@ class HtmlParser(object):
         self.html_cont = html_cont
 
     def get_soup(self):
-        soup = BeautifulSoup(self.html_cont, 'lxml', from_encoding='utf-8')
+        soup = BeautifulSoup(self.html_cont, from_encoding='utf-8')
         return soup
