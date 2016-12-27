@@ -21,11 +21,11 @@ class CrawlerMain(object):
         # print(nmgbank_data)
         bsbank_data = self.bsbank_crawler.craw()
         # print(bsbank_data)
-        ordoscyy_data_1 = self.ordoscyy_crawler_1.craw()
+        # ordoscyy_data_1 = self.ordoscyy_crawler_1.craw()
         # print(ordoscyy_data_1)
-        ordoscyy_data_2 = self.ordoscyy_crawler_2.craw()
+        # ordoscyy_data_2 = self.ordoscyy_crawler_2.craw()
         # print(ordoscyy_data_2)
-        data = yili_data + nmgbank_data + bsbank_data + ordoscyy_data_1 + ordoscyy_data_2
+        data = yili_data + nmgbank_data + bsbank_data
         for item in data:
             item['etl_date'] = datetime.now().strftime("%Y-%m-%d")
         return data
